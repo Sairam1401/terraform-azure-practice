@@ -1,15 +1,15 @@
 resource "azurerm_role_definition" "custom_role" {
   name        = var.role_name
-  scope       = var.role_definition.scope
-  description = var.role_definition.description
+  scope       = var.role_scope
+  description = var.role_description
 
   permissions {
-    actions          = lookup(var.role_definition.permissions, "actions", [])
-    not_actions      = lookup(var.role_definition.permissions, "notActions", [])
-    data_actions     = lookup(var.role_definition.permissions, "dataActions", [])
-    not_data_actions = lookup(var.role_definition.permissions, "notDataActions", [])
+    actions          = lookup(var.role_permissions, "actions", [])
+    not_actions      = lookup(var.role_permissions, "notActions", [])
+    data_actions     = lookup(var.role_permissions, "dataActions", [])
+    not_data_actions = lookup(var.role_permissions, "notDataActions", [])
   }
-  assignable_scopes = lookup(var.role_definition, "assignable_scopes", [])
+  assignable_scopes = var.role_assignable_scopes
 }
 
 /*
