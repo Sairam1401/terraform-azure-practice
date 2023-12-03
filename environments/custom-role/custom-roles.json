@@ -1,0 +1,49 @@
+{
+    "custom_roles": [
+        {
+            "rolename": "AzureAutoScalingAdministrator",
+            "description": "Can Manage autoscaling settings for Azure Resources",
+            "type": "CustomRole",
+            "permission": [
+                {
+                    "actions": [
+                        "Microsoft.Insights/autoscaleSettings/*",
+                        "Microsoft.Insights/diagnosticSettings/*",
+                        "Microsoft.Insights/LogDefinations/*",
+                        "Microsoft.Resources/deployments/*",
+                        "Microsoft.Resources/subscriptions/resourceGroups/deployments/*",
+                        "Microsoft.Support/*"
+                    ],
+                    "notActions": [],
+                    "dataActions": [],
+                    "notDataActions": []
+                }
+            ]
+        },
+        {
+            "rolename": "Azure Access reviewer",
+            "description": "Can review permissions, resource access and generate reports",
+            "type": "CustomRole",
+            "permission": [
+                {
+                    "actions": [
+                        "Microsoft.Authorization/*/read",
+                        "Microsoft.Resources/subscriptions/resourceGroups/read",
+                        "Microsoft.Support/*"
+                    ],
+                    "notActions": [
+                        "Microsoft.Authorization/*/write",
+                        "Microsoft.Authorization/*/delete"
+                    ],
+                    "dataActions": [
+                        "Microsoft.OperationalInsights/workspaces/query/action",
+                        "Microsoft.OperationsManagment/solutions/read",
+                        "Microsoft.OperationsManagment/solutions/write",
+                        "Microsoft.OperationsManagment/solutions/datasources/read"
+                    ],
+                    "notDataActions": []
+                }
+            ]
+        }
+    ]
+}

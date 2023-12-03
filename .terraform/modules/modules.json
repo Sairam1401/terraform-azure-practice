@@ -1,0 +1,1 @@
+{"Modules":[{"Key":"","Source":"","Dir":"."},{"Key":"custom_role","Source":"./module/terraform-azure-custom-role-definition","Dir":"module/terraform-azure-custom-role-definition"},{"Key":"new_roles","Source":"../../terraform-azure-customrole","Dir":""}]}

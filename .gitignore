@@ -1,0 +1,7 @@
+.terraform.lock.hcl
+.terraform.tfstate.lock.info
+createcustomrole.tfplan
+terraform-azure-customrole-definition.tfplan
+terraform.tfstate
+terraform.tfstate.backup
+.terraform/providers/registry.terraform.io/hashicorp/azurerm/3.61.0/windows_386/terraform-provider-azurerm_v3.61.0_x5.exe
