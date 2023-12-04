@@ -1,7 +1,7 @@
 {
     "custom_roles": [
         {
-            "rolename": "CustomAzureAutoScalingAdministrator",
+            "rolename": "CustomLocalAzureAutoScalingAdministrator",
             "description": "Can Manage autoscaling settings for Azure Resources",
             "type": "CustomRole",
             "permissions": [
@@ -22,7 +22,7 @@
             ]
         },
         {
-            "rolename": "CustomAzureAccessReviewer",
+            "rolename": "CustomLocalAzureAccessReviewer",
             "description": "Can review permissions, resource access and generate reports",
             "type": "CustomRole",
             "permissions": [
