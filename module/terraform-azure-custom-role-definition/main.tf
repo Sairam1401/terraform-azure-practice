@@ -1,6 +1,6 @@
 resource "azurerm_role_definition" "custom_role" {
   name        = var.role_name
-  scope       = var.role_definition.scope
+  scope       = var.role_scope
   description = var.role_definition.description
 
   permissions {
@@ -9,7 +9,7 @@ resource "azurerm_role_definition" "custom_role" {
     data_actions     = lookup(var.role_definition.permissions, "dataActions", [])
     not_data_actions = lookup(var.role_definition.permissions, "notDataActions", [])
   }
-  assignable_scopes = lookup(var.role_definition, "assignable_scopes", [])
+  assignable_scopes = var.role_assignable_scopes
 }
 
 /*
