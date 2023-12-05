@@ -1,3 +1,4 @@
+# Includes terraform and azure provider version and other global parameters like subscription information.
 terraform {
   required_version = ">=1.0"
   required_providers {
@@ -8,11 +9,6 @@ terraform {
   }
 }
 
-/* provider "azurerm" {
-  features {}
-  subscription_id = var.hub_subscription_id != null && var.hub_subscription_id != "" ? var.hub_subscription_id : var.azure_vnet_subscription_id
-}
- */
 provider "azurerm" {
   features {}
   alias           = "vnet-alias"

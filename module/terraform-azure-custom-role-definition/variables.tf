@@ -1,3 +1,4 @@
+#variables are defined for resource here. mentions required or optional parameters
 variable "role_definition" {
   type = object({
     description       = string

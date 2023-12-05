@@ -1,3 +1,4 @@
+# custom-roles.tf module invokes this resource to create custom roles
 resource "azurerm_role_definition" "custom_role" {
   name        = var.role_name
   scope       = var.role_scope
@@ -11,9 +12,3 @@ resource "azurerm_role_definition" "custom_role" {
   }
   assignable_scopes = var.role_assignable_scopes
 }
-
-/*
-output "id" {
-  value = tomap({for k, v in azurerm_role_definition.custom_role : k => v.id})
-}
-*/
