@@ -1,14 +1,14 @@
 # terraform-azure-practice
 
-# each file has comments on top to denote what is the functionality
-# module\terraform-azure-custom-role-definition - create custom role definition with terraform module
+### each file has comments on top to denote what is the functionality
+###  module\terraform-azure-custom-role-definition - create custom role definition with terraform module
 
-To login to azure
+### To login to azure
 az login
 az account show -o table
 az account set -s "name/subscription"
 
-To execute can use following commands:
+### To execute can use following commands:
 
 1. terraform fmt - formats the code and files to terraform standards.
 2. terraform init - initializes the modules as per terraform configurations we have in current project. anytime file changes are made better to execute this command.
